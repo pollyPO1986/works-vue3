@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    image: simple-pure-node-env
+    expose:
+      - 8080
+    ports:
+      - ${DOCKER_VUE_8080}:8080
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
